@@ -9,8 +9,6 @@ Image Retrieval is a system that, given a query image, searches a large database
 1.  **Basic Retrieval**: Compares images directly based on their raw pixel values using mathematical distance metrics.
 2.  **Advanced Retrieval**: Leverages a deep learning model to understand the semantic content of images, converting them into feature vectors for comparison. This approach is further optimized using a specialized vector database.
 
-### General Pipeline
-![General Pipeline](https://i.imgur.com/3g0IeJc.png)
 
 ## ⚙️ Methodology
 
