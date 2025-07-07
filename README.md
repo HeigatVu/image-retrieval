@@ -22,11 +22,17 @@ This method operates directly on the pixel values of the images. The query image
 
 **Similarity Metrics Used:**
 * **L1 Distance (Manhattan Distance)**: Calculates the sum of the absolute differences between pixel values.
+
     $L1(\vec{a}, \vec{b}) = \sum_{i=1}^{N} |a_i - b_i|$
+  
 * **L2 Distance (Euclidean Distance)**: Calculates the square root of the sum of squared differences between pixel values.
+
     $L2(\vec{a}, \vec{b}) = \sqrt{\sum_{i=1}^{N} (a_i - b_i)^2}$
+
 * **Cosine Similarity**: Measures the cosine of the angle between two image vectors, focusing on orientation rather than magnitude.
+
     $cosine\_similarity(\vec{a}, \vec{b}) = \frac{\vec{a} \cdot \vec{b}}{||\vec{a}|| ||\vec{b}||}$
+  
 * **Correlation Coefficient**: Measures the linear relationship between two image vectors.
 
 While simple, this approach often fails on complex images where semantic meaning is more important than pixel layout (e.g., finding a picture of a crocodile by its features, not its exact position and color in the frame).
@@ -38,8 +44,6 @@ To overcome the limitations of pixel-based methods, this approach uses a pre-tra
 **Pipeline:**
 1.  **Feature Extraction**: The **CLIP (Contrastive Language-Image Pre-Training)** model is used to convert each image (both the query and the database images) into a dense feature vector (embedding). This vector represents the image's semantic content.
 2.  **Similarity Calculation**: The same distance metrics (L1, L2, Cosine Similarity) are then applied to these feature vectors instead of the raw pixel data. This results in a much more accurate, content-aware search.
-
-![Advanced Pipeline](https://i.imgur.com/u3gQ2iB.png)
 
 ### 3. Optimized Retrieval with a Vector Database
 
@@ -56,11 +60,11 @@ This method is significantly faster for large datasets as it avoids re-calculati
 The advanced method using CLIP provides significantly better results, especially for complex images. The model understands the objects and context within the image, leading to semantically relevant matches.
 
 **Basic Method (L1) - Complex Image:**
-![Basic L1 Result](https://i.imgur.com/9y0h4uS.png)
+![Basic L1 Result](https://github.com/HeigatVu/image-retrieval/blob/main/basic-l1-search.png)
 *The results are based on color and texture, not the subject.*
 
 **Advanced Method (CLIP + L1) - Complex Image:**
-![Advanced CLIP Result](https://i.imgur.com/5A0O6tI.png)
+![Advanced CLIP Result](https://github.com/HeigatVu/image-retrieval/blob/main/clip_l1.png)
 *The results are all images of the same subject (African crocodile), demonstrating a clear understanding of the image content.*
 
 ## 🛠️ Technologies Used
