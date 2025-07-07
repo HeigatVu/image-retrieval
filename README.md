@@ -9,6 +9,8 @@ Image Retrieval is a system that, given a query image, searches a large database
 1.  **Basic Retrieval**: Compares images directly based on their raw pixel values using mathematical distance metrics.
 2.  **Advanced Retrieval**: Leverages a deep learning model to understand the semantic content of images, converting them into feature vectors for comparison. This approach is further optimized using a specialized vector database.
 
+### General Pipeline
+![General Pipeline](https://i.imgur.com/pipelinepipeline.png)
 
 ## ⚙️ Methodology
 
@@ -79,3 +81,4 @@ The advanced method using CLIP provides significantly better results, especially
     ```
 2.  **Prepare Data**: Organize your dataset into `data/train` and `data/test` directories. Each subdirectory within `train` and `test` should represent an image class.
 3.  **Run the Notebook**: Open the project's `.ipynb` notebook and execute the cells sequentially. You can switch between the basic, advanced, and optimized methods to compare their performance.
+S
