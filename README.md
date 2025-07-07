@@ -23,15 +23,18 @@ This method operates directly on the pixel values of the images. The query image
 **Similarity Metrics Used:**
 * **L1 Distance (Manhattan Distance)**: Calculates the sum of the absolute differences between pixel values.
 
-    $L1(\vec{a}, \vec{b}) = \sum_{i=1}^{N} |a_i - b_i|$
+    $L1(\vec{a}, \vec{b})
+  = \sum_{i=1}^{N} |a_i - b_i|$
   
 * **L2 Distance (Euclidean Distance)**: Calculates the square root of the sum of squared differences between pixel values.
 
-    $L2(\vec{a}, \vec{b}) = \sqrt{\sum_{i=1}^{N} (a_i - b_i)^2}$
+    $L2(\vec{a}, \vec{b})
+  = \sqrt{\sum_{i=1}^{N} (a_i - b_i)^2}$
 
 * **Cosine Similarity**: Measures the cosine of the angle between two image vectors, focusing on orientation rather than magnitude.
 
-    $cosine\_similarity(\vec{a}, \vec{b}) = \frac{\vec{a} \cdot \vec{b}}{||\vec{a}|| ||\vec{b}||}$
+    $cosine\_similarity(\vec{a}, \vec{b})
+  = \frac{\vec{a} \cdot \vec{b}}{||\vec{a}|| ||\vec{b}||}$
   
 * **Correlation Coefficient**: Measures the linear relationship between two image vectors.
 
