@@ -32,9 +32,11 @@ This method operates directly on the pixel values of the images. The query image
 * **L2 Distance (Euclidean Distance)**: Calculates the square root of the sum of squared differences between pixel values.
 
     $L2(\vec{a}, \vec{b}) = \sqrt{\sum_{i=1}^{N} (a_i - b_i)^2}$
+  
 * **Cosine Similarity**: Measures the cosine of the angle between two image vectors, focusing on orientation rather than magnitude.
 
     $cosine\_similarity(\vec{a}, \vec{b}) = \frac{\vec{a} \cdot \vec{b}}{||\vec{a}|| ||\vec{b}||}$
+  
 * **Correlation Coefficient (Pearson)**: Measures the linear relationship between two image vectors. A value of +1 is a total positive linear correlation, 0 is no linear correlation, and -1 is a total negative linear correlation.
 
     $r = \frac{\sum(a_i - \mu_a)(b_i - \mu_b)}{\sqrt{\sum(a_i - \mu_a)^2 \sum(b_i - \mu_b)^2}}$
