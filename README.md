@@ -10,7 +10,7 @@ Image Retrieval is a system that, given a query image, searches a large database
 2.  **Advanced Retrieval**: Leverages a deep learning model to understand the semantic content of images, converting them into feature vectors for comparison. This approach is further optimized using a specialized vector database.
 
 ### General Pipeline
-![General Pipeline](https://i.imgur.com/pipelinepipeline.png)
+![General Pipeline](https://github.com/HeigatVu/image-retrieval/blob/main/pipeline.png)
 
 ## ⚙️ Methodology
 
