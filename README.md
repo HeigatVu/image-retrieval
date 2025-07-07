@@ -20,20 +20,23 @@ The project is divided into two main approaches for retrieving images.
 
 This method operates directly on the pixel values of the images. The query image and all images in the database are resized to a uniform dimension. Then, their similarity is calculated using various distance metrics.
 
+### 1. Basic Image Retrieval (Pixel-based)
+
+This method operates directly on the pixel values of the images. The query image and all images in the database are resized to a uniform dimension. Then, their similarity is calculated using various distance metrics.
+
 **Similarity Metrics Used:**
 * **L1 Distance (Manhattan Distance)**: Calculates the sum of the absolute differences between pixel values.
 
     $L1(\vec{a}, \vec{b}) = \sum_{i=1}^{N} |a_i - b_i|$
-  
 * **L2 Distance (Euclidean Distance)**: Calculates the square root of the sum of squared differences between pixel values.
 
     $L2(\vec{a}, \vec{b}) = \sqrt{\sum_{i=1}^{N} (a_i - b_i)^2}$
-
 * **Cosine Similarity**: Measures the cosine of the angle between two image vectors, focusing on orientation rather than magnitude.
 
     $cosine\_similarity(\vec{a}, \vec{b}) = \frac{\vec{a} \cdot \vec{b}}{||\vec{a}|| ||\vec{b}||}$
-  
-* **Correlation Coefficient**: Measures the linear relationship between two image vectors.
+* **Correlation Coefficient (Pearson)**: Measures the linear relationship between two image vectors. A value of +1 is a total positive linear correlation, 0 is no linear correlation, and -1 is a total negative linear correlation.
+
+    $r = \frac{\sum(a_i - \mu_a)(b_i - \mu_b)}{\sqrt{\sum(a_i - \mu_a)^2 \sum(b_i - \mu_b)^2}}$
 
 While simple, this approach often fails on complex images where semantic meaning is more important than pixel layout (e.g., finding a picture of a crocodile by its features, not its exact position and color in the frame).
 
